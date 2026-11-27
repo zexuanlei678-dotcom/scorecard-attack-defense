@@ -1,0 +1,50 @@
+{
+  "dataset": "UCI Default of Credit Card Clients",
+  "n_test": 7500,
+  "test_evaluation": {
+    "auc": 0.7365,
+    "gini": 0.4731,
+    "ks": 0.3588,
+    "score_mean": 528.74,
+    "score_std": 23.03,
+    "bad_rate": 0.2064
+  },
+  "baseline_approval": {
+    "approval_rate": 0.5461,
+    "approved_bad_rate": 0.1147,
+    "rejected_bad_capture": 0.6964
+  },
+  "attack_sweep": [
+    {
+      "strength": 0.2,
+      "flip_rate": 0.0479,
+      "flipped_true_bad_rate": 0.5292,
+      "score_gain": 5.28
+    },
+    {
+      "strength": 0.4,
+      "flip_rate": 0.0787,
+      "flipped_true_bad_rate": 0.4271,
+      "score_gain": 6.52
+    },
+    {
+      "strength": 0.6,
+      "flip_rate": 0.1024,
+      "flipped_true_bad_rate": 0.3724,
+      "score_gain": 7.3
+    },
+    {
+      "strength": 0.8,
+      "flip_rate": 0.1364,
+      "flipped_true_bad_rate": 0.3412,
+      "score_gain": 8.17
+    },
+    {
+      "strength": 1.0,
+      "flip_rate": 0.1555,
+      "flipped_true_bad_rate": 0.3285,
+      "score_gain": 6.72
+    }
+  ],
+  "baseline_approved_bad_rate": 0.1147
+}

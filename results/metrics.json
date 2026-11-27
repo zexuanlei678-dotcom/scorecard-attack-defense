@@ -1,0 +1,198 @@
+{
+  "data": {
+    "n_total": 150000,
+    "n_train": 112500,
+    "n_test": 37500,
+    "bad_rate": 0.0668
+  },
+  "iv": [
+    {
+      "feature": "utilization",
+      "iv": 1.0720081731524498,
+      "strength": "过强(需警惕)",
+      "manipulability": "high"
+    },
+    {
+      "feature": "past_due_90",
+      "iv": 0.8885317540178822,
+      "strength": "过强(需警惕)",
+      "manipulability": "medium"
+    },
+    {
+      "feature": "past_due_30_59",
+      "iv": 0.7469181768673269,
+      "strength": "过强(需警惕)",
+      "manipulability": "medium"
+    },
+    {
+      "feature": "past_due_60_89",
+      "iv": 0.6029431907962701,
+      "strength": "过强(需警惕)",
+      "manipulability": "medium"
+    },
+    {
+      "feature": "age",
+      "iv": 0.2388650035454376,
+      "strength": "中等",
+      "manipulability": "low"
+    },
+    {
+      "feature": "monthly_income",
+      "iv": 0.06551897821806787,
+      "strength": "弱",
+      "manipulability": "medium"
+    },
+    {
+      "feature": "open_credit_lines",
+      "iv": 0.05131305803602947,
+      "strength": "弱",
+      "manipulability": "low"
+    },
+    {
+      "feature": "debt_ratio",
+      "iv": 0.04700542199685146,
+      "strength": "弱",
+      "manipulability": "high"
+    },
+    {
+      "feature": "dependents",
+      "iv": 0.02372635933153763,
+      "strength": "弱",
+      "manipulability": "low"
+    },
+    {
+      "feature": "real_estate_lines",
+      "iv": 0.012848998984969506,
+      "strength": "无预测力",
+      "manipulability": "low"
+    }
+  ],
+  "baseline_train": {
+    "auc": 0.8533,
+    "gini": 0.7066,
+    "ks": 0.5506,
+    "score_mean": 582.16,
+    "score_std": 33.82,
+    "bad_rate": 0.0668
+  },
+  "baseline_test": {
+    "auc": 0.8578,
+    "gini": 0.7157,
+    "ks": 0.5603,
+    "score_mean": 582.23,
+    "score_std": 33.74,
+    "bad_rate": 0.0668
+  },
+  "psi_train_vs_test": 0.0004,
+  "approval_threshold": 591.24,
+  "baseline_approval": {
+    "approval_rate": 0.4971,
+    "approved_bad_rate": 0.0109,
+    "rejected_bad_capture": 0.919
+  },
+  "combined_attack": {
+    "cost": 3.6649,
+    "score_gain": 24.13,
+    "flip_rate": 0.4607,
+    "flipped_count": 17276,
+    "flipped_true_bad_rate": 0.0992,
+    "new_approval_rate": 0.9561
+  },
+  "single_op_full_strength": [
+    {
+      "op": "utilization",
+      "strength": 1.0,
+      "cost": 2.2536,
+      "score_gain": 14.06,
+      "flip_rate": 0.2579,
+      "flipped_count": 9673,
+      "flipped_true_bad_rate": 0.0491,
+      "new_approval_rate": 0.7475
+    },
+    {
+      "op": "debt_ratio",
+      "strength": 1.0,
+      "cost": 1.3051,
+      "score_gain": 2.77,
+      "flip_rate": 0.0417,
+      "flipped_count": 1563,
+      "flipped_true_bad_rate": 0.0269,
+      "new_approval_rate": 0.5351
+    },
+    {
+      "op": "delinquency",
+      "strength": 1.0,
+      "cost": 0.5058,
+      "score_gain": 7.64,
+      "flip_rate": 0.0542,
+      "flipped_count": 2031,
+      "flipped_true_bad_rate": 0.0965,
+      "new_approval_rate": 0.5513
+    },
+    {
+      "op": "income",
+      "strength": 1.0,
+      "cost": 1.0,
+      "score_gain": 1.37,
+      "flip_rate": 0.016,
+      "flipped_count": 600,
+      "flipped_true_bad_rate": 0.03,
+      "new_approval_rate": 0.5131
+    }
+  ],
+  "robust_dropped_features": [
+    "utilization",
+    "debt_ratio"
+  ],
+  "robust_test": {
+    "auc": 0.8263,
+    "gini": 0.6527,
+    "ks": 0.5197,
+    "score_mean": 576.68,
+    "score_std": 27.78,
+    "bad_rate": 0.0668
+  },
+  "adversarial_test": {
+    "auc": 0.8483,
+    "gini": 0.6966,
+    "ks": 0.5367,
+    "score_mean": 569.34,
+    "score_std": 32.48,
+    "bad_rate": 0.0668
+  },
+  "change_detection": {
+    "detection_rate": 1.0,
+    "false_positive_rate": 0.0101,
+    "flagged_total": 37500
+  },
+  "defense_comparison": [
+    {
+      "flip_rate": 0.4607,
+      "flipped_count": 17276,
+      "flipped_true_bad_rate": 0.0992,
+      "auc": 0.8578,
+      "ks": 0.5603,
+      "policy": "baseline"
+    },
+    {
+      "flip_rate": 0.0658,
+      "flipped_count": 2468,
+      "flipped_true_bad_rate": 0.0741,
+      "auc": 0.8263,
+      "ks": 0.5197,
+      "policy": "robust"
+    },
+    {
+      "flip_rate": 0.3639,
+      "flipped_count": 13646,
+      "flipped_true_bad_rate": 0.0363,
+      "auc": 0.8483,
+      "ks": 0.5367,
+      "policy": "adversarial"
+    }
+  ],
+  "bad_rate_gap": {
+    "baseline_approved": 0.0109,
+    "attack_flipped": 0.0992
+  }
+}

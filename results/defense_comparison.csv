@@ -1,0 +1,4 @@
+flip_rate,flipped_count,flipped_true_bad_rate,auc,ks,policy
+0.4607,17276,0.0992,0.8578,0.5603,baseline
+0.0658,2468,0.0741,0.8263,0.5197,robust
+0.3639,13646,0.0363,0.8483,0.5367,adversarial

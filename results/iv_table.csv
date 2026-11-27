@@ -1,0 +1,11 @@
+feature,iv,strength,manipulability
+utilization,1.0720081731524498,过强(需警惕),high
+past_due_90,0.8885317540178822,过强(需警惕),medium
+past_due_30_59,0.7469181768673269,过强(需警惕),medium
+past_due_60_89,0.6029431907962701,过强(需警惕),medium
+age,0.2388650035454376,中等,low
+monthly_income,0.06551897821806787,弱,medium
+open_credit_lines,0.05131305803602947,弱,low
+debt_ratio,0.04700542199685146,弱,high
+dependents,0.02372635933153763,弱,low
+real_estate_lines,0.012848998984969506,无预测力,low
